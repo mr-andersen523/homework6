@@ -28,23 +28,30 @@
     </div>
 
     <div class="row">
-
-      <div class="col-md-3">
-
-        <h2>Search for a City:</h2>
-
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" id="userInput">
-          <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button" id="searchBtn"><i class="fas fa-search"></i></button>
-          </div>
+            <div class="col-sm-4 searchArea">
+                <h3>Search for a City:</h3>
+                <span id="error"></span>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" id="city" placeholder="Search"
+                        aria-label="Search">
+                        <button class="btn btn-outline-secondary" type="button" id="searchCity"><i class="fas fa-search"></i></button>
+                </form>
+                <div class="list-group" id="previousSearch"></div>
+                <br>
+                <div class="list-group"><button class="btn btn-outline-secondary" type="button" id="clearCities">Clear Searches</button></div>
+                <br>
+                <div class="city-list"></div>
+            </div>
+            <div class="col currentCondition">
+                <div class="card">
+                    <div id="show" class="card-body"></div>
+                </div>
+                <br>
+                <div class="row" id="5-day-forecast">
+                    <h3>5-Day Forecast:</h3>
+                </div>
+            </div>
         </div>
-
-
-
-
-
-
 
 <body>
     
@@ -60,6 +67,12 @@
 
 
 </body>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+<script src="script.js"></script>
 
 
 </html>
